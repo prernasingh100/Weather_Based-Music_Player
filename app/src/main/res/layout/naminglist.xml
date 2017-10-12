@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#00000000">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Song Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        tools:ignore="HardcodedText"
+        android:layout_marginBottom="1dp"/>
+
+    <TextView
+        android:id="@+id/album_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Album Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
+
+
+</LinearLayout>

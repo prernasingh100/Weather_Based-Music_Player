@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PlayerActivity">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/bg_art"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:background="@drawable/avicii"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000">
+
+    </RelativeLayout>
+    <!-- ALBUM ART AND SEEKBAR -->
+    <LinearLayout
+        android:id="@+id/seeker"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded,UnknownId">
+
+        <ImageView
+            android:id="@+id/albumArt"
+            android:layout_width="325dp"
+            android:layout_height="325dp"
+            android:background="#000"
+            tools:ignore="ContentDescription" />
+
+        <SeekBar
+            android:id="@+id/music"
+            style="@style/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="#00000000"
+            android:thumb="@color/colorAccent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#f1300e"
+                android:text="NOW"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#f1300e"
+                android:text="FULL"
+                android:textSize="10dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- FOR BUTTON PANEL -->
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        tools:ignore="ObsoleteLayoutParam">
+        <!-- INSIDE BUTTON PANEL -->
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            tools:ignore="RtlHardcoded">
+
+            <ImageButton
+                android:id="@+id/prev"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/translucent_circle"
+                android:onClick="previous"
+                app:srcCompat="@android:drawable/ic_media_previous"
+                tools:ignore="ContentDescription,ObsoleteLayoutParam" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="10dp"
+            tools:ignore="RtlHardcoded">
+
+            <ImageButton
+                android:id="@+id/pl"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:onClick="play"
+                app:srcCompat="@android:drawable/ic_media_pause"
+                tools:ignore="ContentDescription,ObsoleteLayoutParam" />
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="RtlHardcoded">
+
+            <ImageButton
+                android:id="@+id/nxt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/translucent_circle"
+                android:onClick="next"
+                app:srcCompat="@android:drawable/ic_media_next"
+                tools:ignore="ContentDescription,ObsoleteLayoutParam" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- SONGS AND ARTIST NAME -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        tools:ignore="ObsoleteLayoutParam">
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/a"
+            android:layout_weight="1"
+            android:text="SONG NAME"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            tools:ignore="HardcodedText,ObsoleteLayoutParam" />
+
+        <TextView
+            android:id="@+id/songAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ALBUM NAME - ARTIST"
+            android:textAlignment="center"
+            android:textColor="#CC0000"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

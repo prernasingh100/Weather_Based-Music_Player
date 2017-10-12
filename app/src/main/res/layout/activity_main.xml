@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.sdcard1.MainActivity"
+    android:background="#552A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/toggleLayout">
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:checked="false"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/defaulttoggle"
+            android:id="@+id/weatherToggle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listLayout"
+        android:layout_below="@+id/toggleLayout"
+        android:background="@drawable/sharp">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            tools:listitem=""
+            android:background="#e6272b35"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>
